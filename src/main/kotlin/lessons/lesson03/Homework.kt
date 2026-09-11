@@ -10,7 +10,7 @@ var eventDate: String = "10 сентября 2026"
 val eventLocation: String = "Москва"
 
 // 4. Подробный бюджет мероприятия
-private val detailedBudget: String = "Подробный внутренний бюджет мероприятия"
+private val detailsBudget: String = "Подробный внутренний бюджет мероприятия"
 
 // 5. Количество участников
 var participantsCount: Int = 0
@@ -34,7 +34,7 @@ private val budget: String = "Общий бюджет мероприятия"
 var internetAccessLevel: String = "Высокий"
 
 // 12. Информация о транспортировке оборудования, распределении ресурсов и координации между командами поддержки (приватная неизменяемая переменная)
-private val resourceCoordination: String = "Информация о транспортировке и распределении ресурсов"
+private val resourceSchedule: String = "Информация о транспортировке и распределении ресурсов"
 
 // 13. Количество команд (публичная изменяемая переменная)
 var teamsCount: Int = 0
@@ -55,10 +55,10 @@ var freeEquipment: String = "Список свободного оборудов�
 lateinit var mealSchedule: String
 
 // 19. План мероприятий на случай сбоев (приватная неизменяемая переменная)
-private val contingencyPlan: String = "План действий при технических и организационных сбоях"
+private val abnormalPlan: String = "План действий при сбоях"
 
 // 20. Список экспертов и жюри (публичная неизменяемая переменная)
-val expertsAndJury: String = "Список экспертов и членов жюри"
+val listExperts: String = "Список экспертов и членов жюри"
 
 // 21. Политика конфиденциальности (публичная неизменяемая переменная)
 val privacyPolicy: String = "Политика конфиденциальности мероприятия"
@@ -87,7 +87,7 @@ private var eventLog: String = "Лог событий мероприятия"
 val medicalAssistanceAvailable: Boolean = true
 
 // 29. Планы и процедуры для обеспечения безопасности мероприятия, включая эвакуацию и чрезвычайные ситуации (приватная неизменяемая переменная)
-private val safetyProcedures: String = "Планы и процедуры обеспечения безопасности мероприятия"
+private val safetyPlans: String = "Планы и процедуры обеспечения безопасности мероприятия"
 
 // 30. Регистрационный номер мероприятия (публичная неизменяемая переменная)
 val eventRegistrationNumber: String = "HS-2026-001"
@@ -96,13 +96,13 @@ val eventRegistrationNumber: String = "HS-2026-001"
 val maximumNoiseLevel: Int = 70
 
 // 32. Индикатор превышения уровня шума в помещениях (превышен или не превышен в данный момент) (публичная изменяемая логическая переменная)
-var noiseLimitExceeded: Boolean = false
+var noiseLimit: Boolean = false
 
 // 33. План взаимодействия с прессой (публичная неизменяемая переменная)
 val teamProjectsInformation: String = "Информация о проектах команд"
 
 // 34. Детальная публичная информация о проектах каждой команды, включая компиляцию кода и статистику автоматизированных проверок (публичная неизменяемая переменная с ленивым вычислением)
-val publicProjectDetails: String by lazy {
+val projectDetails: String by lazy {
     "Детальная информация о проектах, результаты компиляции и статистика автоматизированных проверок"
 }
 
@@ -123,7 +123,7 @@ val eventReport: String by lazy {
 }
 
 // 39. Внутренние правила распределения призов (приватная неизменяемая переменная)
-private val prizeDistributionRules: String = "Внутренние правила распределения призов"
+private val prizeRules: String = "Внутренние правила распределения призов"
 
 // 40. Список разыгрываемых призов (публичная неизменяемая переменная)
 val prizes: String = "Список разыгрываемых призов"
