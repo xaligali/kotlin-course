@@ -20,18 +20,18 @@ val orResult = (5 > 3) || (5 < 4) // true
 val notResult = !(5 > 3) // false
 
 var number = 5
-number += 3 // number теперь равно 8
+//number += 3 // number теперь равно 8
 // равнозначное выражение: number = number + 3
 
 var a = 5
 var b = a++
-println("a: $a")
-println("b: $b")
+//println("a: $a")
+//println("b: $b")
 
 var c = 5
 var d = ++c
-println("c: $c")
-println("d: $d")
+//println("c: $c")
+//println("d: $d")
 
 val name: String? = null
 val result = name ?: "Unknown" // "Unknown", так как name равно null
@@ -55,4 +55,4 @@ var ex1: Boolean = ((8 + 1) >= 9) || (6 - 2 != 4) && (2 * 3 == 6);
 var ex2: Boolean = (3 + 2 < 6)  && (4 * 2 == 8)
 
 // Ответ
-val powerBank = innerAccumulator + (externalAccumulator ?: 0)
+//val powerBank = innerAccumulator + (externalAccumulator ?: 0)
