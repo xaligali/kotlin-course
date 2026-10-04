@@ -1,45 +1,43 @@
-package lessons.lesson08.homeworks
+package lessons.lesson08
 
-fun main() {
-    // 1. Преобразование строк
-    fun transformPhrase(phrase: String): String {
+// 1. Преобразование строк
+fun transformPhrase(phrase: String): String {
 
-        if (phrase.contains("невозможно")) {
-            return phrase.replace(
+    return when {
+        phrase.contains("невозможно") -> {
+            phrase.replace(
                 "невозможно",
                 "совершенно точно возможно, просто требует времени"
             )
         }
 
-        if (phrase.startsWith("Я не уверен")) {
-            return "$phrase, но моя интуиция говорит об обратном"
+        phrase.startsWith("Я не уверен") -> {
+            "$phrase, но моя интуиция говорит об обратном"
         }
 
-        if (phrase.contains("катастрофа")) {
-            return phrase.replace(
+        phrase.contains("катастрофа") -> {
+            phrase.replace(
                 "катастрофа",
                 "интересное событие"
             )
         }
 
-        if (phrase.endsWith("без проблем")) {
-            return phrase.replace(
+        phrase.endsWith("без проблем") -> {
+            phrase.replace(
                 "без проблем",
                 "с парой интересных вызовов на пути"
             )
         }
 
-        if (!phrase.contains(" ")) {
-            return "Иногда, $phrase, но не всегда"
+        !phrase.contains(" ") -> {
+            "Иногда, $phrase, но не всегда"
         }
-
-        return phrase
+        else -> phrase
     }
-    println(transformPhrase("Это невозможно выполнить за один день"))
-    println(transformPhrase("Я не уверен в успехе этого проекта"))
-    println(transformPhrase("Произошла катастрофа на сервере"))
-    println(transformPhrase("Этот код работает без проблем"))
-    println(transformPhrase("Удача"))
+}
+
+fun main() {
+    println(transformPhrase("невозможно рассказать"))
 
     // 2. Извлечение даты и времени из строки лога
     val log = "Пользователь вошел в систему -> 2021-12-01 09:48:23"
@@ -75,7 +73,7 @@ fun main() {
     val words = phrase.split(" ")
     var abbreviation = ""
     for (word in words) {
-        abbreviation += word[0]
+        abbreviation += word[0].uppercase()
     }
     println(abbreviation)
 }
